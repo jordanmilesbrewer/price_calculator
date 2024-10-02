@@ -6,8 +6,9 @@
 // const fiveHundredBtn = document.querySelector("#500k");
 // const oneMilBtn = document.querySelector("#1mil");
 
-const form = document.querySelector("#form");
+const selectForm = document.querySelector("#form");
+const subscriptionPrice = document.querySelector("#subscription-price");
 
-form.addEventListener("change", (e) => {
-  console.log(e.target.value);
+selectForm.addEventListener("change", (e) => {
+  subscriptionPrice.textContent = `${e.target.value}`;
 });
