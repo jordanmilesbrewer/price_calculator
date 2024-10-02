@@ -9,23 +9,29 @@
     <title>Price Calculator</title>
   </head>
   <body>
-    <h4>Page views per month</h4>
-    <form action="">
-      <label for="payment-period">Yearly payments</label>
-      <input type="checkbox" name="payment-period" id="check" />
-    </form>
-    <div id="views">100K page views per month</div>
-    <div class="slidecontainer">
-      <input
-        type="range"
-        min="0"
-        max="100"
-        value="50"
-        class="slider"
-        id="slider"
-        step="25"
-      />
-    </div>
-    <div id="subscription-price">$16.00 per month</div>
+    <section class="subscription-container">
+      <div class="modal">
+        <div class="text">
+          <div id="views">100K page views per month</div>
+          <div id="subscription-price">$16.00 per month</div>
+        </div>
+        <div class="slidecontainer">
+          <input
+            class="slider"
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="slider"
+            id="slider"
+            step="25"
+          />
+        </div>
+        <form class="toggle-container">
+          <label for="payment-period">Yearly payments</label>
+          <input type="checkbox" name="payment-period" id="check" />
+        </form>
+      </div>
+    </section>
   </body>
 </html>

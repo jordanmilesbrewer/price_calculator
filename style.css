@@ -1,0 +1,31 @@
+body {
+  max-width: 1280px;
+}
+
+.subscription-container {
+  width: 100%;
+}
+
+.modal {
+  margin: 0 auto;
+  width: 40%;
+  height: 20rem;
+  border: solid black 1px;
+  margin-top: 5rem;
+  padding: 0.5rem;
+}
+
+.text {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5rem 0.3rem;
+}
+
+.slidecontainer {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.toggle-container {
+  text-align: center;
+}

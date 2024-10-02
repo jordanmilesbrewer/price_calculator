@@ -8,10 +8,10 @@ const views = document.querySelector("#views");
 
 function displayPrice(value) {
   if (!paymentPeriod.checked) {
-    subscriptionPrice.textContent = `$${value}.00 per month`;
+    subscriptionPrice.textContent = `$${value}.00 / month`;
   } else {
     let newSubPrice = value * 12 * 0.75;
-    subscriptionPrice.textContent = `$${newSubPrice}.00 per year`;
+    subscriptionPrice.textContent = `$${newSubPrice}.00 / year`;
   }
 }
 
