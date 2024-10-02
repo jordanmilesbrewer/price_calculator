@@ -1,39 +1,42 @@
 "use strict";
 
-// const tenBtn = document.querySelector("#10k");
-// const fiftyBtn = document.querySelector("#50k");
-// const OneHundredBtn = document.querySelector("#100k");
-// const fiveHundredBtn = document.querySelector("#500k");
-// const oneMilBtn = document.querySelector("#1mil");
-
 const selectForm = document.querySelector("#form");
-const subscriptionPrice = document.querySelector("#subscription-price");
+let subscriptionPrice = document.querySelector("#subscription-price");
 const paymentPeriod = document.querySelector("#check");
 const slider = document.querySelector("#slider");
-
-// selectForm.addEventListener("change", (e) => {
-//   subscriptionPrice.textContent = `$${e.target.value}.00 Per Month`;
-//   if (paymentPeriod.checked) {
-//     subscriptionPrice.textContent = `$${
-//       e.target.value * 0.75 * 12
-//     }.00 Per Year`;
-//   }
-// });
+const views = document.querySelector("#views");
 
 function displayPrice(value) {
-  subscriptionPrice.textContent = `$${value}.00`;
+  if (!paymentPeriod.checked) {
+    subscriptionPrice.textContent = `$${value}.00 per month`;
+  } else {
+    let newSubPrice = value * 12 * 0.75;
+    subscriptionPrice.textContent = `$${newSubPrice}.00 per year`;
+  }
 }
+
+let monthlyRate = 36;
 
 slider.addEventListener("change", (e) => {
   if (slider.value == 0) {
-    displayPrice(8);
+    monthlyRate = 8;
+    views.textContent = "10k views per month";
   } else if (slider.value == 25) {
-    displayPrice(12);
+    monthlyRate = 12;
+    views.textContent = "50k views per month";
   } else if (slider.value == 50) {
-    displayPrice(16);
+    monthlyRate = 16;
+    views.textContent = "100k views per month";
   } else if (slider.value == 75) {
-    displayPrice(24);
+    monthlyRate = 24;
+    views.textContent = "500k views per month";
   } else if (slider.value == 100) {
-    displayPrice(36);
+    monthlyRate = 36;
+    views.textContent = "1 Million views per month";
   }
+  displayPrice(monthlyRate);
+});
+
+paymentPeriod.addEventListener("change", (e) => {
+  displayPrice(monthlyRate);
 });
