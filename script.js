@@ -8,7 +8,11 @@
 
 const selectForm = document.querySelector("#form");
 const subscriptionPrice = document.querySelector("#subscription-price");
+const paymentPeriod = document.querySelector("#check");
 
 selectForm.addEventListener("change", (e) => {
   subscriptionPrice.textContent = `${e.target.value}`;
+  if (paymentPeriod.checked) {
+    subscriptionPrice.textContent = `${e.target.value * 2}`;
+  }
 });
