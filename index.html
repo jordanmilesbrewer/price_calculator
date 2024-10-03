@@ -9,29 +9,25 @@
     <title>Price Calculator</title>
   </head>
   <body>
-    <section class="subscription-container">
-      <div class="modal">
-        <div class="text">
-          <div id="views">100K page views per month</div>
-          <div id="subscription-price">$16.00 per month</div>
-        </div>
-        <div class="slidecontainer">
-          <input
-            class="slider"
-            type="range"
-            min="0"
-            max="100"
-            value="50"
-            class="slider"
-            id="slider"
-            step="25"
-          />
-        </div>
-        <form class="toggle-container">
-          <label for="payment-period">Yearly payments</label>
-          <input type="checkbox" name="payment-period" id="check" />
-        </form>
+    <div class="container">
+      <div class="pageviews" id="pageviews">10K PAGEVIEWS</div>
+      <div class="price" id="price">$8</div>
+      <div class="slider">
+        <input
+          type="range"
+          min="0"
+          max="4"
+          value="0"
+          class="slider"
+          id="slider"
+        />
       </div>
-    </section>
+      <div class="payment_type" id="payment_type">
+        <input type="checkbox" id="checkbox" />Tick for Yearly Pricing
+      </div>
+    </div>
   </body>
 </html>
+
+<!-- Call the slide bar - slide-bar -->
+<!-- Call the toggle, slider -->
