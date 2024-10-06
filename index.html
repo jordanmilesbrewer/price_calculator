@@ -3,31 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./modern-normalize.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./modern-normalize.css" />
     <script src="./script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Price Calculator</title>
   </head>
   <body>
-    <div class="container">
-      <div class="pageviews" id="pageviews">10K PAGEVIEWS</div>
-      <div class="price" id="price">$8</div>
+    <div class="header">
+      <h1>Simple, traffic based pricing</h1>
+      <h5>Sign-up for our 30-day free trial. No credit card required</h5>
+    </div>
+
+    <div class="main-container">
+      <div class="flex">
+        <div class="upper-text-left flex">
+          <div class="pageviews standard-text" id="pageviews">
+            10K PAGEVIEWS /month
+          </div>
+        </div>
+        <div class="upper-text-right flex">
+          <div class="price" id="price">$8</div>
+          <div>
+            <span class="price margin-right">.00</span
+            ><span class="standard-text payment-period">/month</span>
+          </div>
+        </div>
+      </div>
       <div class="slider">
         <input
           type="range"
           min="0"
           max="4"
           value="0"
-          class="slider"
+          class="slider-bar"
           id="slider"
         />
       </div>
-      <div class="payment_type" id="payment_type">
-        <input type="checkbox" id="checkbox" />Tick for Yearly Pricing
+      <div class="toggle-container flex" id="payment_type">
+        <div class="monthly-billing-text small-text">Monthly Billing</div>
+        <label class="switch">
+          <input type="checkbox" id="checkbox" />
+          <span class="toggle round"></span>
+        </label>
+        <div class="yearly-billing-text small-text">
+          Yearly Billing <span class="discount-box">25% Discount</span>
+        </div>
+      </div>
+      <div class="lower-section flex">
+        <div class="lower-left">
+          <ul class="standard-text">
+            <li>
+              <i class="fa-solid fa-check fa-s" style="color: #ebbf52"></i
+              >Unlimited websites
+            </li>
+            <li>
+              <i class="fa-solid fa-check fa-s" style="color: #ebbf52"></i>100%
+              data ownership
+            </li>
+            <li>
+              <i class="fa-solid fa-check fa-s" style="color: #ebbf52"></i>Email
+              reports
+            </li>
+          </ul>
+        </div>
+        <div class="lower-right">
+          <button class="standard-button">Start my trial</button>
+        </div>
       </div>
     </div>
   </body>
 </html>
-
-<!-- Call the slide bar - slide-bar -->
-<!-- Call the toggle, slider -->

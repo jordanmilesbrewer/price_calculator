@@ -1,51 +1,156 @@
 body {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1260px;
+  background-color: #decdac;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
 }
 
-.subscription-container {
+.standard-button {
+  background-color: #ebbf52;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.7rem 1.8rem;
+}
+
+.standard-button:hover {
+  cursor: pointer;
+  background-color: #ebc052a6;
+  transition: 0.3s ease;
+}
+
+.standard-text {
+  color: black;
+  opacity: 60%;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.small-text {
+  color: black;
+  opacity: 60%;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.margin-right {
+  margin-right: 0.5rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1,
+h5 {
+  color: #44423a;
+}
+
+.main-container {
+  width: 40%;
+  margin: 0 auto;
+  border: transparent;
+  border-radius: 20px;
+  margin-top: 2.5rem;
+  background-color: #fdfaf3;
+  box-shadow: #ad9f85 0px 1px 2px, #ad9f85 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    #ad9f85 0px 16px 32px, #ad9f85 0px 32px 64px;
+}
+
+.upper-text-left {
+  padding: 2rem 1.5rem;
+}
+
+.upper-text-right {
+  padding: 2rem 1.5rem;
+}
+
+.price {
+  color: #45423a;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.slider {
+  text-align: center;
   width: 100%;
 }
 
-.modal {
-  margin: 0 auto;
-  width: 40%;
-  height: 20rem;
-  border: solid black 1px;
-  margin-top: 5rem;
-  padding: 0.5rem;
+#slider {
+  width: 60%;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
-.text {
-  display: flex;
-  justify-content: space-around;
-  margin: 1.5rem 0.3rem;
+#slider:hover {
+  cursor: pointer;
 }
 
-.slidecontainer {
-  text-align: center;
-  margin: 3rem 0 2rem 0;
+#slider::-webkit-slider-runnable-track {
+  background-color: #decdac;
+  border-radius: 40px;
+  height: 3px;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -14px;
+  height: 30px;
+  width: 30px;
+  background-color: #ebbf52;
+  border-radius: 50px;
+}
+#slider::-moz-range-track {
+  background-color: #decdac;
+  border-radius: 40px;
+  height: 3px;
+}
+
+#slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -14px;
+  height: 30px;
+  width: 30px;
+  background-color: #ebbf52;
+  border-radius: 50px;
 }
 
 .toggle-container {
-  text-align: center;
+  justify-content: space-between;
+  width: 60%;
+  padding: 2rem 0;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: solid 1px #656462;
 }
 
 /* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 30px;
+  height: 16px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .toggle {
   position: absolute;
   cursor: pointer;
@@ -53,7 +158,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #decdac;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -61,27 +166,27 @@ body {
 .toggle:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 12px;
+  width: 12px;
+  left: 1px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .toggle {
-  background-color: #2196f3;
+  background-color: #ebbf52;
 }
 
 input:focus + .toggle {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #ebbf52;
 }
 
 input:checked + .toggle:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
 }
 
 /* Rounded sliders */
@@ -91,4 +196,31 @@ input:checked + .toggle:before {
 
 .toggle.round:before {
   border-radius: 50%;
+}
+
+.discount-box {
+  border: 0.5px solid red;
+  background-color: rgba(255, 0, 0, 0.167);
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 0.15rem;
+}
+
+.lower-section {
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  align-items: center;
+}
+
+.lower-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lower-section li {
+  margin-bottom: 0.2rem;
+}
+
+.lower-section li i {
+  margin-right: 0.5rem;
+  font-weight: 900;
 }
